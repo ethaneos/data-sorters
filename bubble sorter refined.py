@@ -49,7 +49,7 @@ while done == False:
     couldBeDone = True
     for i in range(length-1):
         #lines[i].setOutline("red")
-        if height[i] < height[i+1]:
+        if height[i] > height[i+1]:
             #j = i+1
             swapLines(i, i+1)
             couldBeDone = False
@@ -60,7 +60,7 @@ while done == False:
 #now it is done
 print("sorted")
 for i in range(length-1):
-    if height[i] >= height[i+1]:
+    if height[i] <= height[i+1]:
         lines[i].setOutline("green")
     else:
         print("sike nope not sorted")

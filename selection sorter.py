@@ -48,7 +48,7 @@ for i in range(length):
     lines[lowest].setOutline("red")
     lines[length-1-i].setOutline("red")
     for j in range(length-i):
-        if height[j] < height[lowest]:
+        if height[j] > height[lowest]:
             lines[lowest].setOutline("black")
             lowest = j
             lines[lowest].setOutline("red")
@@ -61,7 +61,7 @@ for i in range(length):
 #now it is done
 print("sorted")
 for i in range(length-1):
-    if height[i] >= height[i+1]:
+    if height[i] <= height[i+1]:
         lines[i].setOutline("green")
         lines[i+1].setOutline("green")
     else:
