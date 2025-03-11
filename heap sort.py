@@ -17,7 +17,7 @@ while created == False:
             print("please enter a natural number")
     except:
         print("please enter a natural number")
-print("do you want it to pause or not")
+print("do you want it to pause after creating heap or not")
 while wait == "idk":
     m = input()
     if m == "yes":
@@ -25,14 +25,13 @@ while wait == "idk":
     elif m == "no":
         wait = False
     else:
-        print("Please enter in yes or no no caps")
+        print("Please enter in yes or no (no caps)")
 win = GraphWin("data", length+100, 500)
 
 
 
 lines = [None] * length
 height = [None] * length
-#height = [324, 456, 474, 429, 215, 65, 262, 428, 227]
 place = [None] * length
 done = False
 lowest = 0
@@ -65,7 +64,6 @@ for i in range(length):
     lines[i].setOutline("red")
     lines[i].setOutline("black")
 
-time.sleep(2)
 
 gap = floor(length/shrink)
 
@@ -112,10 +110,11 @@ def compareWithChildren(linePlace,limit):
         return "parent"
 
 
-    
-""""""
+
 #heap sort
 #heapify
+print("Enter in anything to begin sorting")
+dummyvariable = input()
 
 lastLeaf = 2**floor(math.log(length,2))-1
 
@@ -155,23 +154,7 @@ for i in range(length-1):
             tempCheck = currentCheck
             currentCheck = findChild(currentCheck,2)
             swapLines(tempCheck, currentCheck)
-"""
 
-#selection
-for i in range(length):
-    lowest = 0
-    lines[lowest].setOutline("red")
-    lines[length-1-i].setOutline("red")
-    for j in range(length-i):
-        if height[j] < height[lowest]:
-            lines[lowest].setOutline("black")
-            lowest = j
-            lines[lowest].setOutline("red")
-    if height[lowest] != height[length-1-i]:
-        swapLines(lowest,length-i-1)
-    lines[lowest].setOutline("black")
-    lines[length-1-i].setOutline("black")
-"""
 
 
 #now it is done
@@ -184,7 +167,5 @@ for i in range(length-1):
         print("sike nope not sorted")
         lines[i].setOutline("red")
 
-"""
-for i in range(length):
-    lines[i].undraw()
-"""
+print("Enter in anything to close")
+dummyvariable = input()

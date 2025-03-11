@@ -3,11 +3,11 @@ from random import randint
 import time
 
 #initialise
-win = GraphWin("data", 800, 500)
+
 
 print("give amount of data")
 length = int(input())
-
+win = GraphWin("data", length+100, 500)
 lines = [None] * length
 height = [None] * length
 place = [None] * length
@@ -35,14 +35,17 @@ def swapLines(line1, line2):
 #create the data
 for i in range(length):
     height[i] = randint(1,500)
-    place[i] = i+101
+    place[i] = i+50
     lines[i] = Line(Point(place[i], 500), Point(place[i], 500-height[i]))
     lines[i].draw(win)
     lines[i].setOutline("red")
     lines[i].setOutline("black")
 
 
-time.sleep(2)
+print("Enter in anything to begin sorting")
+dummyvariable = input()
+
+
 while done == False:
     couldBeDone = True
     for i in range(length-1):
@@ -72,7 +75,5 @@ for i in range(length-1):
         print("sike nope not sorted")
         lines[i].setOutline("red")
 
-"""
-for i in range(length):
-    lines[i].undraw()
-"""
+print("Enter in anything to close")
+dummyvariable = input()

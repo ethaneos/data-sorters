@@ -44,7 +44,9 @@ for i in range(length):
     lines[i].setOutline("red")
     lines[i].setOutline("black")
 
-time.sleep(2)
+print("Enter in anything to begin sorting")
+dummyvariable = input()
+
 
 gap = floor(length/shrink)
 #comb
@@ -64,22 +66,7 @@ while done == False:
             gap = 1
     else:
         gap = floor(gap/shrink)
-"""
-#selection
-for i in range(length):
-    lowest = 0
-    lines[lowest].setOutline("red")
-    lines[length-1-i].setOutline("red")
-    for j in range(length-i):
-        if height[j] < height[lowest]:
-            lines[lowest].setOutline("black")
-            lowest = j
-            lines[lowest].setOutline("red")
-    if height[lowest] != height[length-1-i]:
-        swapLines(lowest,length-i-1)
-    lines[lowest].setOutline("black")
-    lines[length-1-i].setOutline("black")
-"""
+
 
 
 #now it is done
@@ -92,7 +79,5 @@ for i in range(length-1):
         print("sike nope not sorted")
         lines[i].setOutline("red")
 
-"""
-for i in range(length):
-    lines[i].undraw()
-"""
+print("Enter in anything to close")
+dummyvariable = input()

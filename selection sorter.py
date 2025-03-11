@@ -34,33 +34,15 @@ def swapLines(line1, line2):
 #create the data
 for i in range(length):
     height[i] = randint(1,500)
-    place[i] = i+101
+    place[i] = i+50
     lines[i] = Line(Point(place[i], 500), Point(place[i], 500-height[i]))
     lines[i].draw(win)
     lines[i].setOutline("red")
     lines[i].setOutline("black")
 
-time.sleep(2)
-"""
-while done == False:
-    couldBeDone = True
-    for i in range(length-1):
-        #lines[i].setOutline("red")
-        if height[i] < height[i+1]:
-            #j = i+1
-            swapLines(i, i+1)
-            couldBeDone = False
-        #lines[i].setOutline("black")
-    for i in range(length-1):
-        #lines[i].setOutline("red")
-        if height[length-1-i] > height[length-2-i]:
-            #j = i+1
-            swapLines(length-1-i, length-2-i)
-            couldBeDone = False
-        #lines[i].setOutline("black")
-    if couldBeDone == True:
-        done = True
-"""
+print("Enter in anything to start sorting")
+dummyvariable = input()
+
 for i in range(length):
     lowest = 0
     lines[lowest].setOutline("red")
@@ -86,7 +68,6 @@ for i in range(length-1):
         print("sike nope not sorted")
         lines[i].setOutline("red")
 
-"""
-for i in range(length):
-    lines[i].undraw()
-"""
+print("Enter in anything to close")
+dummyvariable = input()
+
